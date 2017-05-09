@@ -5,7 +5,7 @@ var app = express();
 
 app.use(useragent.express())
 
-app.get('/api/whoami', function(req, res, next){
+app.get('/', function(req, res, next){
   var software = req.useragent.browser + ' and ' + req.useragent.os;
   res.json({"IP": req.ip,
             "Language": req.acceptsLanguages()[0],
