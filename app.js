@@ -12,6 +12,6 @@ app.get('/api/whoami', function(req, res, next){
             "Software": software})
 })
 
-app.listen(3000, function(){
-  console.log('Server running')
+app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function() {
+  console.log('app is now listening on port 3000');
 });
